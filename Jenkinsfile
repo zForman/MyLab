@@ -27,12 +27,12 @@ pipeline {
         stage ('Publish to Nexus') {
             steps {
                 script { 
-                def NexusRepo = Version.endsWith("SNAPSHOT") ? "DevOpsLab-SNAPSHOT" : "DevOpsLab-RELEASE"
+                def NexusRepo = Version.endsWith("SNAPSHOT") ? "EpamDevOpsHW-SNAPSHOT" : "EpamDevOpsHW-RELEASE"
                 
                 nexusArtifactUploader artifacts:
                 [[artifactId: "${ArtifactId}",
                 classifier: '',
-                file: 'target/DevOpsLab-0.0.4-SNAPSHOT.war',
+                file: "target/${ArtifactId}-${Version}.war",
                 type: 'war']],
                 credentialsId: '51231d5b-eb83-4b91-8e8f-56020908d643',
                 groupId: "${GroupId}",

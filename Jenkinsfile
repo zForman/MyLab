@@ -17,10 +17,9 @@ pipeline {
             }
         }
 
-         stage ('Publish to Nexus') {
+        stage ('Publish to Nexus') {
             steps {
-                nexusArtifactUploader artifacts: [
-                    [artifactId: 'DevOps', classifier: '', file: 'target/EpamDevOpsHW-0.0.4-SNAPSHOT.war', type: 'war']], credentialsId: 'bd22ed79-f353-378b-88dd-718be3f3f35b', groupId: 'com.devopslab', nexusUrl: '172.20.10.155:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'EpamDevOpsHW-SNAPSHOT', version: '0.0.4-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'DevOpsLab', classifier: '', file: 'target/DevOpsLab-0.0.4-SNAPSHOT.war', type: 'war']], credentialsId: '51231d5b-eb83-4b91-8e8f-56020908d643', groupId: 'devopslab', nexusUrl: '172.20.10.155', nexusVersion: 'nexus3', protocol: 'http', repository: 'EpamDevOpsHW-SNAPSHOT', version: '0.0.4-SNAPSHOT'
             }
         }
 

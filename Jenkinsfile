@@ -26,18 +26,22 @@ pipeline {
 
         stage ('Publish to Nexus') {
             steps {
-                nexusArtifactUploader artifacts: 
-                [[artifactId: "${ArtifactId}", 
-                classifier: '', 
-                file: 'target/DevOpsLab-0.0.4-SNAPSHOT.war', 
-                type: 'war']], 
-                credentialsId: '51231d5b-eb83-4b91-8e8f-56020908d643', 
-                groupId: "${GroupId}", 
-                nexusUrl: '172.20.10.155:8081', 
-                nexusVersion: 'nexus3', 
-                protocol: 'http', 
-                repository: 'EpamDevOpsHW-SNAPSHOT', 
+                script { 
+                def NexusRepo = Version.endsWith("SNAPSHOT") ? "EpamDevOpsHW-SNAPSHOT" : "EpamDevOpsHW-RELEASE"
+                
+                nexusArtifactUploader artifacts:
+                [[artifactId: "${ArtifactId}",
+                classifier: '',
+                file: 'target/DevOpsLab-0.0.4-SNAPSHOT.war',
+                type: 'war']],
+                credentialsId: '51231d5b-eb83-4b91-8e8f-56020908d643',
+                groupId: "${GroupId}",
+                nexusUrl: '172.20.10.155:8081',
+                nexusVersion: 'nexus3',
+                protocol: 'http',
+                repository: "${NexusRepo}",
                 version: "${Version}"
+                }
             }
         }
 

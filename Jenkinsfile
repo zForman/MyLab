@@ -8,6 +8,7 @@ pipeline {
         ArtifactId  = readMavenPom().getArtifactId()
         Version     = readMavenPom().getVersion()
         Name        = readMavenPom().getName()
+        GroupId     = readMavenPom().getGroupId()
     }
 
     stages {
@@ -26,17 +27,17 @@ pipeline {
         stage ('Publish to Nexus') {
             steps {
                 nexusArtifactUploader artifacts: 
-                [[artifactId: 'DevOpsLab', 
+                [[artifactId: "${ArtifactId}", 
                 classifier: '', 
                 file: 'target/DevOpsLab-0.0.4-SNAPSHOT.war', 
                 type: 'war']], 
                 credentialsId: '51231d5b-eb83-4b91-8e8f-56020908d643', 
-                groupId: 'devopslab', 
+                groupId: "${GroupId}", 
                 nexusUrl: '172.20.10.155:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
                 repository: 'EpamDevOpsHW-SNAPSHOT', 
-                version: '0.0.4-SNAPSHOT'
+                version: "${Version}"
             }
         }
 
@@ -44,7 +45,7 @@ pipeline {
             steps {
                 echo "Artifact ID is '${ArtifactId}'"
                 echo "Version is '${Version}'"
-                echo "GroupID is '{}'"
+                echo "GroupID is '${GroupId}'"
                 echo "Name is '${Name}'"
             }
         }

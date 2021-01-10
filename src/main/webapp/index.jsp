@@ -52,9 +52,9 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello</h1>
-        <p>This is Vinays DevOps AWS Lab</p>
+        <p>DevOps AWS Lab v.0.0.6</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-        <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" role="button">Register &raquo;</a></p>
     </div>
 </div>
 

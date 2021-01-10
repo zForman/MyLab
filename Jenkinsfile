@@ -44,15 +44,15 @@ pipeline {
                 }
             }
         }
-
-        stage ('Print ENV Variables') {
-            steps {
-                echo "Artifact ID is '${ArtifactId}'"
-                echo "Version is '${Version}'"
-                echo "GroupID is '${GroupId}'"
-                echo "Name is '${Name}'"
-            }
-        }
+	
+        // stage ('Print ENV Variables') {
+        //     steps {
+        //         echo "Artifact ID is '${ArtifactId}'"
+        //         echo "Version is '${Version}'"
+        //         echo "GroupID is '${GroupId}'"
+        //         echo "Name is '${Name}'"
+        //     }
+        // }
 
         stage ('Deploy') {
             steps {

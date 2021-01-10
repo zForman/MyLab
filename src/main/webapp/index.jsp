@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Vinay's DevOps AWS Lab</a>
+            <a class="navbar-brand" href="#">DevOps AWS Lab</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -44,56 +44,24 @@
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
-        </div><!--/.navbar-collapse -->
+        </div>
     </div>
 </div>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello</h1>
-        <p>DevOps AWS Lab v.0.0.6</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-        <p><a class="btn btn-primary btn-lg" role="button">Register &raquo;</a></p>
+        <h1>EPAM</h1>
+        <p>DevOps AWS Lab v.0.0.7</p>
     </div>
 </div>
 
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Git,Maven and GitHub</h2>
-            <p>I have used Git for version controlling. Maven as a build tool. I have used GitHub as my source code repository </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Nexus</h2>
-            <p>I have used Nexus3 as my maven repository manager. Jenkins will publish the artifacts to Nexus after succesful build </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Jenkins</h2>
-            <p>I have used Jenkins as my continuous integration tool. I used both simple piplelines and declarative pipelines for the automation </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Ansible</h2>
-            <p>I have used Ansible as my deployment tool. Wrote couple of playbooks using roles and with out roles</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Terraform</h2>
-            <p>I have used Terraform as my IaC tool. Wrote couple of terraform files to create the EC2 instance which is hosting tomcat server</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-    </div>
-
+<div class="container">   
     <hr>
-
     <footer>
-        <p>&copy; vinay's devops lab 2020-2021</p>
+        <p>&copy; EPAM DevOpsLab</p>
     </footer>
-</div> <!-- /container -->
+</div>
 
 
 <!-- Bootstrap core JavaScript
